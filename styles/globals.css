@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html, body, #__next {
+  height: 100%;
+}
+
+body {
+  @apply bg-noir-900 text-gray-200 antialiased;
+}
+
+.noir-gradient {
+  background: radial-gradient(1200px 600px at 50% 0%, rgba(143,0,255,0.18), rgba(0,0,0,0) 60%),
+              radial-gradient(900px 500px at 80% 20%, rgba(0,229,255,0.1), rgba(0,0,0,0) 60%),
+              linear-gradient(180deg, #0a0b0e 0%, #0f1115 60%, #0a0b0e 100%);
+}
+
+.hypnotic {
+  --size: 120px;
+  background: repeating-conic-gradient(from 0deg, rgba(143,0,255,0.08) 0deg 15deg, rgba(0,229,255,0.05) 15deg 30deg);
+  mask: radial-gradient(circle at center, black 55%, transparent 60%);
+  animation: rotate 18s linear infinite;
+}
+
+@keyframes rotate {
+  to { transform: rotate(360deg); }
+}
