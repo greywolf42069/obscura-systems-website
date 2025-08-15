@@ -1,0 +1,23 @@
+#!/usr/bin/env sh
+
+# Block commits containing env or key files
+if git diff --cached --name-only | grep -E '\.(env|pem|p12|key)$' >/dev/null; then
+  echo "Error: Attempt to commit environment or key files (.env, .pem, .p12, .key)."
+  exit 1
+fi
+
+# Block commits containing .env files with any extension
+if git diff --cached --name-only | grep -E '\.env' >/dev/null; then
+  echo "Error: Attempt to commit .env files. Remove them before committing."
+  exit 1
+fi
+
+# Block commits that add lines containing sensitive keys (exclude .husky directory)
+if git diff --cached -- . ':!/.husky/**' | grep -E '(^\+.*(SMTP_PASS=|SMTP_USER=|APP_PASSWORD=|GOOGLE_CLIENT_SECRET=|SECRET_KEY=))' >/dev/null; then
+  echo "Error: Commit contains sensitive keys (e.g., SMTP_PASS=). Remove them before committing."
+  exit 1
+fi
+
+# Optional: run lint or tests (disabled for speed)
+# npm run lint --silent || exit 1
+# npm test --silent || exit 1
