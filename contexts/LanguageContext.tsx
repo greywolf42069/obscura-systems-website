@@ -41,7 +41,7 @@ const translations: Record<Lang, Record<string, string>> = {
 
     // About
     'about.title': 'Built for Chicago. Friendly but Stern.',
-    'about.para1': 'We deliver superior, private security tailored to your property—without the bloat. We\'re two co-founders: your sales agent walks the neighborhood to find folks who want better security, and the closer handles the details and finishes the deal.',
+    'about.para1': 'We deliver superior, private security tailored to your property—without the bloat.',
     'about.para2': 'No licenses yet; we operate with a comprehensive contract that protects both parties. In the event of a security breach, we provide long-term email support and optional services like data extraction from recordings, composite images, or audio transcriptions.',
     'about.para3': 'We\'re simpler and sexier than big names like Ring—private by default, with straightforward pricing and no upsells. Extra customizations are quoted as needed.',
     'about.hours': 'Operating hours: 10am–6pm',
@@ -94,7 +94,7 @@ const translations: Record<Lang, Record<string, string>> = {
     'faq.question2': 'What makes your security system different from Ring or ADT?',
     'faq.answer2': 'Unlike Ring (which shares data with police) or ADT (expensive monthly fees), OBSCURA provides complete privacy - your footage belongs to you alone. We offer a one-time $777 fee with no subscriptions, extreme HD cameras with infrared night vision, and personalized consultation for your specific property layout.',
     'faq.question3': 'How does the $777 service work exactly?',
-    'faq.answer3': 'The $777 covers everything: initial in-person consultation at your Chicago property, custom camera placement plan, Amazon shopping list with exact equipment, second visit for installation support, and lifetime email support. No hidden fees, no monthly charges, ever.',
+    'faq.answer3': 'The $777 covers everything: initial in-person consultation at your Chicago property, custom camera placement plan, Amazon shopping list with exact equipment, second visit for installation support, and email support. No hidden fees, no monthly charges, ever.',
     'faq.question4': 'Do I need permits for security cameras in Chicago?',
     'faq.answer4': 'In Chicago, you generally don\'t need permits for residential security cameras on your own property. However, cameras should not point directly at neighbors\' private areas. We\'ll help position cameras legally and effectively during your consultation.',
     'faq.question5': 'What happens during Chicago winters? Will the cameras still work?',
@@ -141,7 +141,7 @@ const translations: Record<Lang, Record<string, string>> = {
 
     // About
     'about.title': 'Construido para Chicago. Amable pero Firme.',
-    'about.para1': 'Entregamos seguridad superior y privada adaptada a tu propiedad, sin hinchazón. Somos dos cofundadores: tu agente de ventas camina por el vecindario para encontrar personas que quieren mejor seguridad, y el cerrador maneja los detalles y finaliza el trato.',
+    'about.para1': 'Entregamos seguridad superior y privada adaptada a tu propiedad, sin hinchazón.',
     'about.para2': 'Aún no tenemos licencias; operamos con un contrato integral que protege a ambas partes. En caso de una violación de seguridad, proporcionamos soporte de email a largo plazo y servicios opcionales como extracción de datos de grabaciones, imágenes compuestas o transcripciones de audio.',
     'about.para3': 'Somos más simples y atractivos que grandes nombres como Ring: privados por defecto, con precios directos y sin ventas adicionales. Las personalizaciones adicionales se cotizan según sea necesario.',
     'about.hours': 'Horario de operación: 10am–6pm',
@@ -181,7 +181,7 @@ const translations: Record<Lang, Record<string, string>> = {
     'faq.question2': '¿Qué hace diferente su sistema de seguridad de Ring o ADT?',
     'faq.answer2': 'A diferencia de Ring (que comparte datos con la policía) o ADT (tarifas mensuales caras), OBSCURA proporciona privacidad completa: tu grabación te pertenece únicamente a ti. Ofrecemos una tarifa única de $777 sin suscripciones, cámaras HD extremas con visión nocturna infrarroja, y consulta personalizada para el diseño específico de tu propiedad.',
     'faq.question3': '¿Cómo funciona exactamente el servicio de $777?',
-    'faq.answer3': 'Los $777 cubren todo: consulta inicial en persona en tu propiedad de Chicago, plan personalizado de ubicación de cámaras, lista de compras de Amazon con equipo exacto, segunda visita para soporte de instalación, y soporte de email de por vida. Sin tarifas ocultas, sin cargos mensuales, nunca.',
+    'faq.answer3': 'Los $777 cubren todo: consulta inicial en persona en tu propiedad de Chicago, plan personalizado de ubicación de cámaras, lista de compras de Amazon con equipo exacto, segunda visita para soporte de instalación, y soporte por email. Sin tarifas ocultas, sin cargos mensuales, nunca.',
     'faq.question4': '¿Necesito permisos para cámaras de seguridad en Chicago?',
     'faq.answer4': 'En Chicago, generalmente no necesitas permisos para cámaras de seguridad residenciales en tu propiedad. Sin embargo, las cámaras no deben apuntar directamente a áreas privadas de vecinos. Te ayudaremos a posicionar las cámaras legal y efectivamente durante tu consulta.',
     'faq.question5': '¿Qué pasa durante los inviernos de Chicago? ¿Funcionarán las cámaras?',
@@ -235,7 +235,7 @@ const translations: Record<Lang, Record<string, string>> = {
 
     // About
     'about.title': 'Zbudowane dla Chicago. Przyjazne ale Stanowcze.',
-    'about.para1': 'Dostarczamy doskonałe, prywatne bezpieczeństwo dostosowane do Twojej nieruchomości — bez nadmiaru. Jesteśmy dwoma współzałożycielami: Twój agent sprzedaży chodzi po okolicy, aby znaleźć ludzi, którzy chcą lepszego bezpieczeństwa, a zamykający zajmuje się szczegółami i finalizuje transakcję.',
+    'about.para1': 'Dostarczamy doskonałe, prywatne bezpieczeństwo dostosowane do Twojej nieruchomości — bez nadmiaru.',
     'about.para2': 'Jeszcze nie mamy licencji; działamy z kompleksową umową, która chroni obie strony. W przypadku naruszenia bezpieczeństwa, zapewniamy długoterminowe wsparcie email i opcjonalne usługi, takie jak ekstrakcja danych z nagrań, obrazy kompozytowe lub transkrypcje audio.',
     'about.para3': 'Jesteśmy prostsi i bardziej atrakcyjni niż wielkie marki jak Ring — prywatni domyślnie, z prostymi cenami i bez dodatkowych sprzedaży. Dodatkowe dostosowania są wyceniane według potrzeb.',
     'about.hours': 'Godziny pracy: 10:00–18:00',
@@ -282,7 +282,7 @@ const translations: Record<Lang, Record<string, string>> = {
     'faq.question2': 'Co wyróżnia wasz system bezpieczeństwa od Ring lub ADT?',
     'faq.answer2': 'W przeciwieństwie do Ring (który dzieli się danymi z policją) lub ADT (droga opłata miesięczna), OBSCURA zapewnia całkowitą prywatność - twoje nagrania należą tylko do ciebie. Oferujemy jednorazową opłatę $777 bez subskrypcji, ekstremalnie HD kamery z podczerwienią nocną i spersonalizowaną konsultację dla konkretnego układu twojej nieruchomości.',
     'faq.question3': 'Jak dokładnie działa usługa za $777?',
-    'faq.answer3': '$777 obejmuje wszystko: początkową konsultację osobistą w twojej nieruchomości w Chicago, spersonalizowany plan rozmieszczenia kamer, listę zakupów Amazon z dokładnym sprzętem, drugą wizytę na wsparcie instalacji i dożywotnie wsparcie email. Brak ukrytych opłat, brak miesięcznych opłat, nigdy.',
+    'faq.answer3': '$777 obejmuje wszystko: początkową konsultację osobistą w twojej nieruchomości w Chicago, spersonalizowany plan rozmieszczenia kamer, listę zakupów Amazon z dokładnym sprzętem, drugą wizytę na wsparcie instalacji i wsparcie email. Brak ukrytych opłat, brak miesięcznych opłat, nigdy.',
     'faq.question4': 'Czy potrzebuję pozwoleń na kamery bezpieczeństwa w Chicago?',
     'faq.answer4': 'W Chicago generalnie nie potrzebujesz pozwoleń na kamery bezpieczeństwa w domu na własnej nieruchomości. Jednak kamery nie powinny wskazywać bezpośrednio na prywatne obszary sąsiadów. Pomożemy ci umieścić kamery legalnie i skutecznie podczas konsultacji.',
     'faq.question5': 'Co się dzieje podczas chicagowskich zim? Czy kamery nadal będą działać?',
