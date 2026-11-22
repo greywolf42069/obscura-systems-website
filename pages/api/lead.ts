@@ -26,7 +26,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     await transporter.sendMail({
       from: process.env.SMTP_FROM || 'no-reply@obscura.local',
-      to: 'phideauxleroux@gmail.com',
+      to: 'doggy@muse.ai',
       subject: 'OBSCURA Security – New Consultation Request',
       text
     })

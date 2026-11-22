@@ -34,7 +34,7 @@ export default function Home() {
                 "addressRegion": "IL"
               },
               "telephone": "Contact via form",
-              "email": "phideauxleroux@gmail.com",
+              "email": "doggy@muse.ai",
               "priceRange": "$777",
               "serviceType": "Security Camera Installation",
               "areaServed": "Chicago, IL"
