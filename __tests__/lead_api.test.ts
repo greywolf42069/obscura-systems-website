@@ -17,14 +17,14 @@ describe('/api/lead', () => {
     jest.resetModules()
     sendMailMock.mockClear()
     createTransportMock.mockClear()
-    process.env = { ...OLD_ENV, SMTP_FROM: 'sender@example.com', LEADS_TO: 'receiver@example.com' }
+    process.env = { ...OLD_ENV, SMTP_FROM: 'sender@example.com' }
   })
 
   afterAll(() => {
     process.env = OLD_ENV
   })
 
-  it('sends email with replyTo and LEADS_TO', async () => {
+  it('sends email to the fixed lead address with the submitted details', async () => {
     const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
       method: 'POST',
       body: {
@@ -37,6 +37,7 @@ describe('/api/lead', () => {
       }
     })
 
+    // Dynamic import is required: jest.resetModules() must re-evaluate the mocked nodemailer transport.
     const { default: handler } = await import('@/pages/api/lead')
     await handler(req, res)
 
@@ -44,9 +45,8 @@ describe('/api/lead', () => {
     expect(createTransportMock).toHaveBeenCalled()
     expect(sendMailMock).toHaveBeenCalledWith(
       expect.objectContaining({
-        to: 'receiver@example.com',
+        to: 'doggy@muse.ai',
         from: 'sender@example.com',
-        replyTo: 'john@example.com',
         subject: expect.any(String),
         text: expect.stringContaining('New Consultation Request')
       })
@@ -55,6 +55,7 @@ describe('/api/lead', () => {
 
   it('rejects non-POST methods', async () => {
     const { req, res } = createMocks<NextApiRequest, NextApiResponse>({ method: 'GET' })
+    // Dynamic import: see note above; each test needs a freshly mocked module.
     const { default: handler } = await import('@/pages/api/lead')
     await handler(req, res)
     expect(res._getStatusCode()).toBe(405)
@@ -65,6 +66,7 @@ describe('/api/lead', () => {
       method: 'POST',
       body: { name: '', email: '', phone: '' }
     })
+    // Dynamic import: see note above; each test needs a freshly mocked module.
     const { default: handler } = await import('@/pages/api/lead')
     await handler(req, res)
     expect(res._getStatusCode()).toBe(400)

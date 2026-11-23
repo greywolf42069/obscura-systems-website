@@ -44,24 +44,24 @@ export default function FAQ() {
   ]
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-noir-900 border-t border-gray-800">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl font-bold text-gray-100 sm:text-4xl">
             {t('faq.title')}
           </h2>
-          <p className="mt-4 text-lg text-gray-600">
+          <p className="mt-4 text-lg text-gray-400">
             {t('faq.subtitle')}
           </p>
         </div>
 
         <div className="mt-12 space-y-8">
           {faqItems.map((item, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-sm p-6">
-              <h3 className="text-lg font-semibold text-gray-900">
+            <div key={index} className="bg-noir-800 rounded-lg shadow-glow p-6 border border-gray-800">
+              <h3 className="text-lg font-semibold text-gray-100">
                 {item.question}
               </h3>
-              <p className="mt-2 text-gray-600 leading-relaxed">
+              <p className="mt-2 text-gray-400 leading-relaxed">
                 {item.answer}
               </p>
             </div>
@@ -69,7 +69,7 @@ export default function FAQ() {
         </div>
 
         <div className="mt-12 text-center">
-          <p className="text-gray-600">
+          <p className="text-gray-400">
             {t('faq.serviceArea')}: <strong>Chicago, IL and surrounding areas including North Shore, South Suburbs, and West Suburbs</strong>
           </p>
         </div>

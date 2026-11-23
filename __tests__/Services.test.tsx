@@ -12,7 +12,7 @@ describe('Services Component', () => {
 
     // Check that titles are translated
     expect(screen.getByText('Services & Pricing')).toBeInTheDocument()
-    expect(screen.getByText(/\$777 one-time fee includes/)).toBeInTheDocument()
+    expect(screen.getByText(/\$375 one-time fee includes/)).toBeInTheDocument()
 
     // Check that feature list items are translated
     expect(screen.getByText('CCTV (extreme high definition)')).toBeInTheDocument()
