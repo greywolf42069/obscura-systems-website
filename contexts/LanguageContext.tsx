@@ -31,7 +31,7 @@ const translations: Record<Lang, Record<string, string>> = {
     'hero.card.line3': 'No subscription. No monthly fees. Ever.',
 
     // Trust strip
-    'trust.item1': 'Installed by a retired Illinois state trooper',
+    'trust.item1': 'Installed by trained professionals',
     'trust.item2': 'Chicago local — within 50 miles of downtown',
     'trust.item3': 'Written contract protects both parties',
     'trust.item4': 'No subscription, ever — footage stored in your home',
@@ -212,7 +212,7 @@ const translations: Record<Lang, Record<string, string>> = {
     'hero.card.line3': 'Sin suscripción. Sin pagos mensuales. Nunca.',
 
     // Trust strip
-    'trust.item1': 'Instalado por un agente retirado de la Policía Estatal de Illinois',
+    'trust.item1': 'Instalado por profesionales capacitados',
     'trust.item2': 'Local de Chicago — a menos de 50 millas del centro',
     'trust.item3': 'Contrato escrito que protege a ambas partes',
     'trust.item4': 'Sin suscripción, nunca — las grabaciones se guardan en tu casa',
@@ -393,7 +393,7 @@ const translations: Record<Lang, Record<string, string>> = {
     'hero.card.line3': 'Bez subskrypcji. Bez opłat miesięcznych. Nigdy.',
 
     // Trust strip
-    'trust.item1': 'Instalacje wykonuje emerytowany funkcjonariusz policji stanowej Illinois',
+    'trust.item1': 'Instalacje wykonują przeszkoleni profesjonaliści',
     'trust.item2': 'Lokal z Chicago — w promieniu 50 mil od centrum',
     'trust.item3': 'Pisemna umowa chroni obie strony',
     'trust.item4': 'Bez subskrypcji — nagrania przechowywane w Twoim domu',
