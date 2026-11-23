@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useState, ReactNode } from 'react'
+import NextRouter from 'next/router'
 
 type Lang = 'en' | 'es' | 'pl'
 
@@ -570,19 +571,22 @@ const translations: Record<Lang, Record<string, string>> = {
   }
 }
 
-export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const [lang, setLangState] = useState<Lang>('en')
+export const LanguageProvider = ({ children, locale = 'en' }: { children: ReactNode; locale?: Lang }) => {
+  const [lang, setLangState] = useState<Lang>(locale)
 
+  // Language is driven by the URL locale (/, /es, /pl) so each locale route
+  // server-renders its own language — required for correct indexing/hreflang.
   useEffect(() => {
-    try {
-      const saved = localStorage.getItem(STORAGE_KEY) as Lang | null
-      if (saved) setLangState(saved)
-    } catch {}
-  }, [])
+    setLangState(locale)
+  }, [locale])
 
   const setLang = (l: Lang) => {
     setLangState(l)
     try { localStorage.setItem(STORAGE_KEY, l) } catch {}
+    const r = NextRouter.router
+    if (r && r.locale !== l) {
+      r.push(r.pathname, r.asPath, { locale: l })
+    }
   }
 
   const t = (key: string) => {

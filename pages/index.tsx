@@ -19,9 +19,20 @@ export default function Home() {
       <Head>
         <title>Security Camera Installation in Chicago | No Subscription, Private CCTV — OBSCURA Security</title>
         <meta name="description" content="Professional security camera installation in Chicago with $375 flat service covering both visits, no subscription, and local storage. Private CCTV with infrared night vision and motion detection." />
-        <meta name="keywords" content="security cameras Chicago, CCTV installation, custom security solutions, home security, business security, private security, surveillance systems" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo.svg" />
+        <link rel="canonical" href="https://obscura-theta.vercel.app/" />
+        <link rel="alternate" hrefLang="en" href="https://obscura-theta.vercel.app/" />
+        <link rel="alternate" hrefLang="es" href="https://obscura-theta.vercel.app/es" />
+        <link rel="alternate" hrefLang="pl" href="https://obscura-theta.vercel.app/pl" />
+        <link rel="alternate" hrefLang="x-default" href="https://obscura-theta.vercel.app/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="OBSCURA Security" />
+        <meta property="og:title" content="Security Camera Installation in Chicago | No Subscription, Private CCTV — OBSCURA Security" />
+        <meta property="og:description" content="$375 flat service covering consultation and installation. No subscription, footage stays in your home. Chicago security camera installation by trained professionals." />
+        <meta property="og:url" content="https://obscura-theta.vercel.app/" />
+        <meta property="og:image" content="https://obscura-theta.vercel.app/OBSCURA.jpeg" />
+        <meta name="twitter:card" content="summary_large_image" />
         
         {/* Schema.org structured data */}
         <script
@@ -29,17 +40,17 @@ export default function Home() {
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "LocalBusiness",
+              "@type": "HomeAndConstructionBusiness",
               "name": "OBSCURA Security",
+              "url": "https://obscura-theta.vercel.app/",
               "description": "Custom security camera installation and CCTV solutions",
               "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Chicago",
                 "addressRegion": "IL"
               },
-              "telephone": "Contact via form",
               "email": "doggy@muse.ai",
-              "priceRange": "$375",
+              "priceRange": "$",
               "serviceType": "Security Camera Installation",
               "areaServed": ["Chicago", "Evanston", "Oak Park", "Naperville", "Schaumburg", "Arlington Heights"],
               "openingHours": "Mo-Su 10:00-18:00",

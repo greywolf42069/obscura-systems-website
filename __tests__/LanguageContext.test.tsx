@@ -74,15 +74,15 @@ describe('LanguageContext', () => {
     expect(localStorageMock.getItem('obscura_lang')).toBe('pl')
   })
 
-  it('loads language preference from localStorage', () => {
+  it('takes language from the route locale prop, not localStorage', () => {
     localStorageMock.setItem('obscura_lang', 'es')
-    
+
     render(
-      <LanguageProvider>
+      <LanguageProvider locale="pl">
         <TestComponent />
       </LanguageProvider>
     )
 
-    expect(screen.getByTestId('current-lang').textContent).toBe('es')
+    expect(screen.getByTestId('current-lang').textContent).toBe('pl')
   })
 })
