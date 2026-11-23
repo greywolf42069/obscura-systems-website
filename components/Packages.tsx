@@ -60,6 +60,11 @@ export default function Packages() {
             </div>
           ))}
         </div>
+
+        <div className="mt-8 rounded-xl border border-gray-800 bg-noir-800/50 p-6">
+          <h3 className="text-xl font-bold">{t('packages.escalation.title')}</h3>
+          <p className="mt-2 text-sm text-gray-400 max-w-4xl">{t('packages.escalation.body')}</p>
+        </div>
       </div>
     </section>
   )

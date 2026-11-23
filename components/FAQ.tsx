@@ -18,7 +18,8 @@ export default function FAQ() {
     { question: t('faq.question5'), answer: t('faq.answer5') },
     { question: t('faq.question6'), answer: t('faq.answer6') },
     { question: t('faq.question7'), answer: t('faq.answer7') },
-    { question: t('faq.question8'), answer: t('faq.answer8') }
+    { question: t('faq.question8'), answer: t('faq.answer8') },
+    { question: t('faq.question9'), answer: t('faq.answer9') }
   ]
 
   return (
