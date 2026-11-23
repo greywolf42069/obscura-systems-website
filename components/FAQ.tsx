@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { useLanguage } from '../contexts/LanguageContext'
 
 interface FAQItem {
@@ -7,40 +8,17 @@ interface FAQItem {
 
 export default function FAQ() {
   const { t } = useLanguage()
+  const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   const faqItems: FAQItem[] = [
-    {
-      question: t('faq.question1'),
-      answer: t('faq.answer1')
-    },
-    {
-      question: t('faq.question2'),
-      answer: t('faq.answer2')
-    },
-    {
-      question: t('faq.question3'),
-      answer: t('faq.answer3')
-    },
-    {
-      question: t('faq.question4'),
-      answer: t('faq.answer4')
-    },
-    {
-      question: t('faq.question5'),
-      answer: t('faq.answer5')
-    },
-    {
-      question: t('faq.question6'),
-      answer: t('faq.answer6')
-    },
-    {
-      question: t('faq.question7'),
-      answer: t('faq.answer7')
-    },
-    {
-      question: t('faq.question8'),
-      answer: t('faq.answer8')
-    }
+    { question: t('faq.question1'), answer: t('faq.answer1') },
+    { question: t('faq.question2'), answer: t('faq.answer2') },
+    { question: t('faq.question3'), answer: t('faq.answer3') },
+    { question: t('faq.question4'), answer: t('faq.answer4') },
+    { question: t('faq.question5'), answer: t('faq.answer5') },
+    { question: t('faq.question6'), answer: t('faq.answer6') },
+    { question: t('faq.question7'), answer: t('faq.answer7') },
+    { question: t('faq.question8'), answer: t('faq.answer8') }
   ]
 
   return (
@@ -55,23 +33,47 @@ export default function FAQ() {
           </p>
         </div>
 
-        <div className="mt-12 space-y-8">
-          {faqItems.map((item, index) => (
-            <div key={index} className="bg-noir-800 rounded-lg shadow-glow p-6 border border-gray-800">
-              <h3 className="text-lg font-semibold text-gray-100">
-                {item.question}
-              </h3>
-              <p className="mt-2 text-gray-400 leading-relaxed">
-                {item.answer}
-              </p>
-            </div>
-          ))}
+        <div className="mt-12 space-y-4">
+          {faqItems.map((item, index) => {
+            const open = openIndex === index
+            return (
+              <div key={index} className="bg-noir-800 rounded-lg border border-gray-800 overflow-hidden">
+                <button
+                  type="button"
+                  onClick={() => setOpenIndex(open ? null : index)}
+                  aria-expanded={open}
+                  className="flex w-full items-center justify-between gap-4 p-5 text-left"
+                >
+                  <span className="text-base sm:text-lg font-semibold text-gray-100">
+                    {item.question}
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    className={`shrink-0 text-accent-secondary transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
+                  >
+                    ▾
+                  </span>
+                </button>
+                {open && (
+                  <p className="px-5 pb-5 text-gray-400 leading-relaxed">
+                    {item.answer}
+                  </p>
+                )}
+              </div>
+            )
+          })}
         </div>
 
         <div className="mt-12 text-center">
           <p className="text-gray-400">
             {t('faq.serviceArea')}: <strong>Chicago, IL and surrounding areas including North Shore, South Suburbs, and West Suburbs</strong>
           </p>
+          <a
+            href="#contact"
+            className="mt-6 inline-block rounded-lg bg-gradient-to-r from-accent-primary to-accent-secondary px-6 py-3 font-semibold text-white shadow-glow"
+          >
+            {t('hero.ctaBook')}
+          </a>
         </div>
       </div>
     </section>

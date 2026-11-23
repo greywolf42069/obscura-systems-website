@@ -21,22 +21,22 @@ export default function CookieConsent() {
   if (!visible) return null
 
   return (
-    <div className="fixed bottom-4 left-4 right-4 md:left-1/2 md:-translate-x-1/2 bg-noir-800 border border-gray-700 rounded-lg p-4 shadow-lg z-50">
-      <div className="flex flex-col md:flex-row md:items-center gap-4">
-        <p className="text-gray-300 flex-1">{t('cookie.message')}</p>
-        <div className="flex items-center gap-3">
+    <div className="fixed bottom-0 inset-x-0 bg-noir-800/95 backdrop-blur border-t border-gray-700 z-50">
+      <div className="container mx-auto px-4 py-2.5 flex items-center gap-3">
+        <p className="text-xs sm:text-sm text-gray-300 flex-1 leading-snug">{t('cookie.message')}</p>
+        <div className="flex items-center gap-2 shrink-0">
           <button
             onClick={() => {
               try { localStorage.setItem(STORAGE_KEY, ACCEPTED_VALUE) } catch {}
               setVisible(false)
             }}
-            className="px-4 py-2 rounded-md bg-gradient-to-r from-accent-primary to-accent-secondary text-white font-medium"
+            className="px-3 py-1.5 text-sm rounded-md bg-gradient-to-r from-accent-primary to-accent-secondary text-white font-medium"
           >
             {t('cookie.accept')}
           </button>
           <button
             onClick={() => setVisible(false)}
-            className="px-4 py-2 rounded-md border border-gray-600 text-gray-200 hover:bg-noir-700"
+            className="px-3 py-1.5 text-sm rounded-md border border-gray-600 text-gray-200 hover:bg-noir-700"
           >
             {t('cookie.decline')}
           </button>

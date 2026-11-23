@@ -40,7 +40,7 @@ const Header = () => {
         </motion.div>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden lg:flex items-center space-x-8">
           {navItems.map((item, index) => (
             <motion.a
               key={index}
@@ -71,7 +71,7 @@ const Header = () => {
             href="#contact"
             whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(143, 0, 255, 0.5)' }}
             whileTap={{ scale: 0.95 }}
-            className="bg-gradient-to-r from-accent-primary to-accent-secondary text-white px-6 py-2 rounded-lg font-semibold"
+            className="bg-gradient-to-r from-accent-primary to-accent-secondary text-white px-6 py-2 rounded-lg font-semibold whitespace-nowrap"
           >
             {t('nav.cta')}
           </motion.a>
@@ -80,7 +80,7 @@ const Header = () => {
         {/* Mobile Menu Button */}
         <button 
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="md:hidden text-accent-secondary"
+          className="lg:hidden text-accent-secondary"
           aria-label="Toggle navigation menu"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -94,7 +94,7 @@ const Header = () => {
         <motion.div 
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 'auto' }}
-          className="md:hidden bg-noir-800 border-t border-gray-700"
+          className="lg:hidden bg-noir-800 border-t border-gray-700"
         >
           <div className="container mx-auto px-6 py-4 space-y-4">
             {navItems.map((item, index) => (

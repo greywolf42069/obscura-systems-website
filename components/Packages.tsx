@@ -24,7 +24,7 @@ export default function Packages() {
               className="relative flex flex-col rounded-xl border border-gray-800 bg-noir-800 p-6 shadow-glow"
             >
               {popular && (
-                <span className="absolute -top-3 right-6 rounded-full bg-gradient-to-r from-accent-primary to-accent-secondary px-3 py-1 text-xs font-semibold text-white">
+                <span className="mb-4 self-start rounded-full bg-gradient-to-r from-accent-primary to-accent-secondary px-3 py-1 text-xs font-semibold text-white">
                   {t('packages.popular')}
                 </span>
               )}
@@ -40,14 +40,15 @@ export default function Packages() {
                 ))}
               </ul>
 
-              <div className="mt-6 border-t border-gray-700 pt-4 text-sm">
-                <p className="text-gray-400">
+              <div className="mt-6 border-t border-gray-700 pt-4">
+                <p className="text-gray-300">
+                  {t('packages.totalLabel')}:{' '}
+                  <span className="text-2xl font-extrabold text-accent-secondary">{t(`packages.${key}.total`)}</span>
+                </p>
+                <p className="mt-2 text-sm text-gray-400">
                   {t('packages.equipmentLabel')}: <span className="font-semibold text-gray-200">{t(`packages.${key}.equipmentCost`)}</span>
                 </p>
-                <p className="mt-1 text-gray-400">{t('packages.serviceCost')}</p>
-                <p className="mt-2 text-gray-300">
-                  {t('packages.totalLabel')}: <span className="font-bold text-accent-secondary">{t(`packages.${key}.total`)}</span>
-                </p>
+                <p className="mt-1 text-sm text-gray-400">{t('packages.serviceCost')}</p>
               </div>
 
               <a

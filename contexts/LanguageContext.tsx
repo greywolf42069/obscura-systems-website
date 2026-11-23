@@ -24,6 +24,11 @@ const translations: Record<Lang, Record<string, string>> = {
     'hero.feature2': 'Infrared Night Vision',
     'hero.feature3': 'Private Solution',
     'hero.feature4': 'Motion Alerts + Recording',
+    'hero.card.title': 'One flat service price',
+    'hero.card.once': 'one-time',
+    'hero.card.line1': 'Covers both visits — consultation & coverage map, then installation',
+    'hero.card.line2': 'Equipment paid separately — you own it outright',
+    'hero.card.line3': 'No subscription. No monthly fees. Ever.',
 
     // Trust strip
     'trust.item1': 'Installed by a retired Illinois state trooper',
@@ -117,7 +122,7 @@ const translations: Record<Lang, Record<string, string>> = {
     // About
     'about.title': 'Built for Chicago. Friendly but Stern.',
     'about.para1': 'We deliver superior, private security tailored to your property—without the bloat.',
-    'about.para2': 'No licenses yet; we operate with a comprehensive contract that protects both parties. In the event of a security breach, we provide long-term email support and optional services like data extraction from recordings, composite images, or audio transcriptions.',
+    'about.para2': 'Every job runs on a written contract that protects both parties. In the event of a security breach, we provide long-term email support and optional services like data extraction from recordings, composite images, or audio transcriptions.',
     'about.para3': 'We\'re simpler and sexier than big names like Ring—private by default, with straightforward pricing and no upsells. Extra customizations are quoted as needed.',
     'about.hours': 'Operating hours: 10am–6pm',
     'about.location': 'Target city: Chicago, IL',
@@ -200,6 +205,11 @@ const translations: Record<Lang, Record<string, string>> = {
     'hero.feature2': 'Visión Nocturna Infrarroja',
     'hero.feature3': 'Solución Privada',
     'hero.feature4': 'Alertas de Movimiento + Grabación',
+    'hero.card.title': 'Un precio único de servicio',
+    'hero.card.once': 'pago único',
+    'hero.card.line1': 'Cubre las dos visitas: consulta y mapa de cobertura, luego la instalación',
+    'hero.card.line2': 'El equipo se paga por separado: es tuyo en propiedad',
+    'hero.card.line3': 'Sin suscripción. Sin pagos mensuales. Nunca.',
 
     // Trust strip
     'trust.item1': 'Instalado por un agente retirado de la Policía Estatal de Illinois',
@@ -293,7 +303,7 @@ const translations: Record<Lang, Record<string, string>> = {
     // About
     'about.title': 'Construido para Chicago. Amable pero Firme.',
     'about.para1': 'Entregamos seguridad superior y privada adaptada a tu propiedad, sin hinchazón.',
-    'about.para2': 'Aún no tenemos licencias; operamos con un contrato integral que protege a ambas partes. En caso de una violación de seguridad, proporcionamos soporte de email a largo plazo y servicios opcionales como extracción de datos de grabaciones, imágenes compuestas o transcripciones de audio.',
+    'about.para2': 'Cada trabajo se realiza con un contrato escrito que protege a ambas partes. En caso de una violación de seguridad, proporcionamos soporte de email a largo plazo y servicios opcionales como extracción de datos de grabaciones, imágenes compuestas o transcripciones de audio.',
     'about.para3': 'Somos más simples y atractivos que grandes nombres como Ring: privados por defecto, con precios directos y sin ventas adicionales. Las personalizaciones adicionales se cotizan según sea necesario.',
     'about.hours': 'Horario de operación: 10am–6pm',
     'about.location': 'Ciudad objetivo: Chicago, IL',
@@ -376,6 +386,11 @@ const translations: Record<Lang, Record<string, string>> = {
     'hero.feature2': 'Nocne Widzenie Podczerwone',
     'hero.feature3': 'Prywatne Rozwiązanie',
     'hero.feature4': 'Alerty Ruchu + Nagrywanie',
+    'hero.card.title': 'Jedna stała cena usługi',
+    'hero.card.once': 'jednorazowo',
+    'hero.card.line1': 'Obejmuje obie wizyty: konsultację z mapą pokrycia, a potem instalację',
+    'hero.card.line2': 'Sprzęt płatny osobno — jest Twój na własność',
+    'hero.card.line3': 'Bez subskrypcji. Bez opłat miesięcznych. Nigdy.',
 
     // Trust strip
     'trust.item1': 'Instalacje wykonuje emerytowany funkcjonariusz policji stanowej Illinois',
@@ -469,7 +484,7 @@ const translations: Record<Lang, Record<string, string>> = {
     // About
     'about.title': 'Zbudowane dla Chicago. Przyjazne ale Stanowcze.',
     'about.para1': 'Dostarczamy doskonałe, prywatne bezpieczeństwo dostosowane do Twojej nieruchomości — bez nadmiaru.',
-    'about.para2': 'Jeszcze nie mamy licencji; działamy z kompleksową umową, która chroni obie strony. W przypadku naruszenia bezpieczeństwa, zapewniamy długoterminowe wsparcie email i opcjonalne usługi, takie jak ekstrakcja danych z nagrań, obrazy kompozytowe lub transkrypcje audio.',
+    'about.para2': 'Każde zlecenie realizujemy na podstawie pisemnej umowy, która chroni obie strony. W przypadku naruszenia bezpieczeństwa, zapewniamy długoterminowe wsparcie email i opcjonalne usługi, takie jak ekstrakcja danych z nagrań, obrazy kompozytowe lub transkrypcje audio.',
     'about.para3': 'Jesteśmy prostsi i bardziej atrakcyjni niż wielkie marki jak Ring — prywatni domyślnie, z prostymi cenami i bez dodatkowych sprzedaży. Dodatkowe dostosowania są wyceniane według potrzeb.',
     'about.hours': 'Godziny pracy: 10:00–18:00',
     'about.location': 'Miasto docelowe: Chicago, IL',

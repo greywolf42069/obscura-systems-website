@@ -8,6 +8,12 @@ const rows = [
   { key: 'police', cells: ['comparison.o.police', 'comparison.r.police', 'comparison.a.police'] },
 ] as const
 
+const providers = [
+  { nameKey: 'comparison.col.obscura', cellIdx: 0, highlight: true },
+  { nameKey: 'comparison.col.ring', cellIdx: 1, highlight: false },
+  { nameKey: 'comparison.col.adt', cellIdx: 2, highlight: false },
+] as const
+
 export default function Comparison() {
   const { t } = useLanguage()
 
@@ -17,8 +23,31 @@ export default function Comparison() {
         <h2 className="text-3xl md:text-5xl font-bold">{t('comparison.title')}</h2>
         <p className="text-gray-400 mt-4 max-w-3xl">{t('comparison.subtitle')}</p>
 
-        <div className="mt-10 overflow-x-auto rounded-xl border border-gray-800">
-          <table className="w-full min-w-[640px] border-collapse text-left text-sm">
+        {/* Mobile: stacked provider cards */}
+        <div className="mt-10 space-y-4 md:hidden">
+          {providers.map((p) => (
+            <div
+              key={p.nameKey}
+              className={`rounded-xl border p-5 ${p.highlight ? 'border-accent-primary bg-noir-800 shadow-glow' : 'border-gray-800 bg-noir-800/50'}`}
+            >
+              <h3 className={`text-lg font-bold ${p.highlight ? 'text-accent-secondary' : 'text-gray-200'}`}>
+                {t(p.nameKey)}
+              </h3>
+              <dl className="mt-3 space-y-2 text-sm">
+                {rows.map((row) => (
+                  <div key={row.key} className="flex flex-col">
+                    <dt className="text-gray-500">{t(`comparison.row.${row.key}`)}</dt>
+                    <dd className={p.highlight ? 'text-gray-100' : 'text-gray-400'}>{t(row.cells[p.cellIdx])}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop / tablet: table */}
+        <div className="mt-10 hidden overflow-x-auto rounded-xl border border-gray-800 md:block">
+          <table className="w-full border-collapse text-left text-sm">
             <thead>
               <tr className="bg-noir-800 text-gray-200">
                 <th className="p-4 font-semibold">{t('comparison.col.provider')}</th>

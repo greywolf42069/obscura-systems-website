@@ -21,7 +21,7 @@ describe('FAQ Component', () => {
       </LanguageProvider>
     )
     
-    const questions = screen.getAllByRole('heading', { level: 3 })
+    const questions = screen.getAllByRole('button')
     expect(questions.length).toBeGreaterThanOrEqual(6)
   })
 
